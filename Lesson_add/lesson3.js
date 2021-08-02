@@ -41,12 +41,13 @@ let arr = [
 
 let lang = arr[1];
     
-alert(lang.join());
+alert(lang);
+
 
 // 2.
-let namePerson = prompt('Введите имя', 'Артем');
+// let namePerson = prompt('Введите имя', 'Артем');
 
-namePerson == 'Артем' ? alert('Директор') : namePerson == 'Максим' ? alert('Преподаватель') : alert ('Студент');
+// namePerson == 'Артем' ? alert('Директор') : namePerson == 'Максим' ? alert('Преподаватель') : alert ('Студент');
 
 
 
