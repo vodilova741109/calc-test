@@ -34,14 +34,14 @@
 // } 
 
 //  c.
-// let arr = [
-//   ru = [ 'пн', 'вт', 'ср','чт','пт','сб','вс'],
-//   en = [ 'mo', 'tu', 'we','th','fr','sa','su'],
-// ]
+let arr = [
+  ru = [ 'пн', 'вт', 'ср','чт','пт','сб','вс'],
+  en = [ 'mo', 'tu', 'we','th','fr','sa','su'],
+]
 
-// let lang = arr[1];
+let lang = arr[1];
     
-// alert(lang.join());
+alert(lang.join());
 
 // 2.
 let namePerson = prompt('Введите имя', 'Артем');
