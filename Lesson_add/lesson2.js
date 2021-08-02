@@ -1,5 +1,6 @@
 'use strict';
 
+// Leeson 2
 let num = 266219,
      str = String(266219),
      arr = str.split(''),
@@ -14,7 +15,7 @@ console.log(arr);
 
   let result = arr[0],
         result1 = 0;
-  for (i=1; i<arr.length; i++) {
+  for ( let i=1; i<arr.length; i++) {
      arr[i] = +arr[i];  
      result *= arr[i]; /* перемножили все цифры массива*/ 
      result1 = result **3;    /* возведение в степень 3*/ 
@@ -26,8 +27,5 @@ console.log(arr);
   console.log(String(result1).substring(0,2));
  
  
-  
-  
-
 
 
