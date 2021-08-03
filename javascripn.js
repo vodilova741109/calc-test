@@ -1,3 +1,5 @@
+'use strict';
+
 let num = 266219,
      str = String(266219),
      arr = str.split(''),
