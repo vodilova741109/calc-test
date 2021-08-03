@@ -35,11 +35,8 @@ let money = +prompt("Ваш месячный доход?", 20000),
   } 
 
 //  1
-  function getExpensesMonth(a,b) {
-    
-    
-    
-    return(a + b); 
+  function getExpensesMonth(a,b) {    
+    return(amount1 + amount2); 
   }
   
   
@@ -61,7 +58,7 @@ let money = +prompt("Ваш месячный доход?", 20000),
   showTypeOf(income);
   showTypeOf(deposit);
 
-  console.log('Расходы за месяц: ', getExpensesMonth(amount1, amount2)); 
+  console.log('Расходы за месяц: ', getExpensesMonth()); 
   console.log(addExpenses.toLowerCase().split(','));  
   console.log('Цель будет достигнута за '+ getTargetMonth() + ' месяцев');
   console.log('Бюджет на день : ',budgetDay);
