@@ -92,4 +92,4 @@ start();
    // console.log(addExpenses.length)git status!;
   // console.log('Период равен '+ period + ' месяцев, ' + 'Цель заработать ' + money + ' рублей');
   // console.log(addExpenses.toLowerCase());
-  // console.log('Бюджет на месяц : ', accumulatedMonth);
+  // console.log('Бюджет на месяц1 : ', accumulatedMonth);
