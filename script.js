@@ -93,4 +93,3 @@ start();
   // console.log('Период равен '+ period + ' месяцев, ' + 'Цель заработать ' + money + ' рублей');
   // console.log(addExpenses.toLowerCase());
   // console.log('Бюджет на месяц : ', accumulatedMonth);
-  // ghjdthrf
