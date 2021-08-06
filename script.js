@@ -59,25 +59,33 @@ let appData = {
   },
 
 
-  getAccumulatedMonth:  function (){
-    
-    return money - appData.expensesAmount;
-  },
+  getAccumulatedMonth:  function (){    
    
-  accumulatedMonth: getAccumulatedMonth(),
+    return money - appData.expensesAmount();
+  },
+  /*
+  accumulatedMonth:  function (){
+     return appData.getAccumulatedMonth()
+    },*/
+    /*
+    accumulatedMonth:  function (){
+      return appData['getAccumulatedMonth']()
+     },
+     */
+    accumulatedMonth:()=>{
+      return this.getAccumulatedMonth()
+    },
 
-  getTargetMonth: function (){    
-  
-    return(appData.mission / appData.accumulatedMonth);  
+  getTargetMonth: () => {    
+    
+    return(this.mission / this.accumulatedMonth);  
     
   },
 
-
-
-}
-
- 
+} 
    
+
+
 
 
 start();
