@@ -20,7 +20,8 @@ start();
 let appData = {
     income: {},
     addIncome: [],
-    expenses: [],
+    expenses: {},
+    addExpenses: [],
     deposit: false,
     mission: 50000,  
     budget: money,
@@ -32,6 +33,25 @@ let appData = {
       appData.addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую', ''); 
       appData.addExpenses.toLowerCase().split(',');    
       appData.deposit = confirm('Есть ли у вас депозит в банке?'); 
+      
+   
+     function(){
+      for (let i = 0; i < 2; i++) {
+        let sum = 0;
+        
+        appData.expenses.a = prompt('Введите обязательную статью расходов?');
+        let amount = +prompt('Во сколько это обойдется?');  
+            while (!isNumber(amount )) {
+              amount  = prompt('Во сколько это обойдется?');
+            }
+           sum += amount;   
+              
+      }     return sum;     }
+
+  
+
+       appData.expenses.a = sum;
+              
       
     },
   getStatusIncome: function(){
@@ -46,20 +66,7 @@ let appData = {
     }  
     },
 
-    getExpensesMonth: function (){
-      let sum = 0;     
 
-      for (let i = 0; i < 2; i++) {
-        
-        appData.expenses[i] = prompt('Введите обязательную статью расходов?');
-        let amount = prompt('Во сколько это обойдется?');  
-        while (!isNumber(amount)) {
-          amount = prompt('Во сколько это обойдется?');
-        }
-        sum += +amount; 
-      }     
-          return sum;    
-    },
     
 
     getAccumulatedMonth:  function (){    
@@ -72,34 +79,15 @@ let appData = {
       return Math.ceil(appData.mission/budgetMonth);
       
     }
-    /* Костин код
-    /* три способа
-    budgetMonth:  function (){
-      return appData.getAccumulatedMonth()
-      },*/
-      /*
-      budgetMonth:  function (){
-        return appData['getAccumulatedMonth']()
-      },     
-      budgetMonth:()=>{
-        return this.getAccumulatedMonth
-      },
-     */
 
-    // getTargetMonth: () => {    
-      
-    //   return(this.mission / this.budgetMonth);  
-      
-    // },
-    // period: Math.ceil(this.mission /  this.budgetMonthh),
 
   } 
 
   appData.asking(); 
   
   // расходы за месяц expensesMonth
-  let expensesMonth = appData.getExpensesMonth();
-  // console.log(expensesAmount);
+let expensesMonth = appData.expenses.sum;
+  console.log(appData.expenses.a.amount);
 
   // доходы - расходы: budgetMonth
   let budgetMonth =   appData.getAccumulatedMonth();
