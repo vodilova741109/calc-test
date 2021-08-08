@@ -64,7 +64,7 @@ let appData = {
     }  
     }, 
     getBudget:  function (){   
-      appData.budgetMonth = appData.budget.money - appData.expensesMonth;
+      appData.budgetMonth = appData.budget - appData.expensesMonth;
       appData.budgetDay =  Math.floor(appData.budgetMonth/30);   
       appData.period = Math.ceil(appData.mission / appData.budgetMonth);    
            
