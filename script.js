@@ -45,7 +45,7 @@ let appData = {
       appData.expenses[a] = b;
 
         while (!isNumber(b)) {
-          appData.expenses.b = +prompt('Во сколько это обойдется?');
+          b = +prompt('Во сколько это обойдется?');
         }   
        
          sum += +b
