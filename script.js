@@ -38,15 +38,17 @@ let appData = {
 
       for (let i = 0; i < 2; i++) {
         
-      appData.expenses.a= prompt('Введите обязательную статью расходов?');
-      appData.expenses.b = +prompt('Во сколько это обойдется?'); 
       
-      
-        while (!isNumber(appData.expenses.b)) {
+      let a = prompt('Введите обязательную статью расходов?');
+      let b = +prompt('Во сколько это обойдется?'); 
+     
+      appData.expenses[a] = b;
+
+        while (!isNumber(b)) {
           appData.expenses.b = +prompt('Во сколько это обойдется?');
         }   
        
-         sum += +appData.expenses.b
+         sum += +b
          
         }
         appData.expensesMonth = sum; 
