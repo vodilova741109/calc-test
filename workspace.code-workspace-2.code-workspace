@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "calc",
+			"path": "."
+		},
+		{
+			"name": "img",
+			"path": "..\\..\\..\\Downloads\\434ce23cffd9071b5c52d2518d87b9eb\\img"
+		},
+		{
+			"name": "css",
+			"path": "..\\..\\..\\Downloads\\434ce23cffd9071b5c52d2518d87b9eb\\css"
+		},
+		{
+			"name": "font",
+			"path": "..\\..\\..\\Downloads\\434ce23cffd9071b5c52d2518d87b9eb\\font"
+		}
+	],
+	"settings": {}
+}
