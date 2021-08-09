@@ -157,10 +157,10 @@ let appData = {
   appData.getInfoDeposit();
   console.log(appData.percentDeposit, appData.moneyDeposit,appData.calcSaveMoney());
  
-  // for (let key in appData){
-  //   console.log('Hаша программа включает в себя данные:: ' + key + ' значение: ' + appData[key]);
+  for (let key in appData){
+    console.log('Hаша программа включает в себя данные:: ' + key + ' значение: ' + appData[key]);
     
-  //  }
+   }
     
  
 
