@@ -64,7 +64,7 @@ let appData = {
     budget: 0,   
     budgetDay: 0,
     budgetMonth: 0,  
-    // period: 1,
+    period: 1,
     expensesMonth: 0,
     incomeMonth: 0, 
     addExpenses:[],   
@@ -77,22 +77,17 @@ let appData = {
         alert('Ошибка, введите число!');
         return;
       }
-      appData.budget = +money.value;      
-      
-      // appData.asking(); 
-            
+      appData.budget = +money.value;        
+      // appData.asking();            
       
       appData.getExpenses();
       appData.getIncome();
-      appData.getAddExpenses();    
-
+      appData.getAddExpenses();
       appData.getAddIncome();  
       appData.getBudget();
-      appData.getTargetMonth();
-      
+      appData.getTargetMonth();      
       appData.showResult();
-
-      
+      appData.start();      
     },   
     showResult: function(){
       budgetMonth.value = appData.budgetMonth;
@@ -101,7 +96,6 @@ let appData = {
       additionalExpenses.value = appData.addExpenses.join(', ');
       additionalIncome.value =  appData.addIncome.join(', ');
       targetMonth.value = appData.getTargetMonth();     
-      periodAmountValue.value = appData.AccumPeriod();
       additionalIncome.value = appData.incomeMonth;
       incomePeriod.value = appData.calcSaveMoney();      
 
@@ -243,19 +237,12 @@ let appData = {
       }
     },
     eventFunc: function(){
-      periodAmountValue.textContent = +periodAmountValue.previousElementSibling.value; 
-     
-    },
-  
+      appData.period = +periodAmount.value;  
+      periodAmountValue.textContent = +periodAmount.value;      
+    },      
     calcSaveMoney: function(){
       return appData.budgetMonth * appData.period;
-    },    
-
-    AccumPeriod: function(){   
-      appData.period = periodAmountValue.textContent;  
-    },
-    
-  
+    },     
   } 
 
 
@@ -264,7 +251,6 @@ let appData = {
   btnExpenses.addEventListener('click', appData.addExpensesBlock);
   btnIncome.addEventListener('click', appData.addIncomeBlock);  
   periodAmount.addEventListener('input', appData.eventFunc);
-  periodAmount.addEventListener('cange', appData.AccumPeriod);
 
 
   
