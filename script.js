@@ -64,7 +64,7 @@ let appData = {
     budget: 0,   
     budgetDay: 0,
     budgetMonth: 0,  
-    period: 1,
+    periodAmount: 1,
     expensesMonth: 0,
     incomeMonth: 0, 
     addExpenses:[],   
@@ -86,8 +86,8 @@ let appData = {
       appData.getAddIncome();  
       appData.getBudget();
       appData.getTargetMonth();      
-      appData.showResult();
-      appData.start();      
+      appData.showResult();      
+      appData.calcIncomePeriod();    
     },   
     showResult: function(){
       budgetMonth.value = appData.budgetMonth;
@@ -97,7 +97,7 @@ let appData = {
       additionalIncome.value =  appData.addIncome.join(', ');
       targetMonth.value = appData.getTargetMonth();     
       additionalIncome.value = appData.incomeMonth;
-      incomePeriod.value = appData.calcSaveMoney();      
+      incomePeriod.value = appData.calcIncomePeriod();      
 
     },
     addExpensesBlock: function(){           
@@ -236,12 +236,12 @@ let appData = {
                 
       }
     },
-    eventFunc: function(){
-      appData.period = +periodAmount.value;  
-      periodAmountValue.textContent = +periodAmount.value;      
+    changePeriodAmound: function(){     
+      periodAmountValue.textContent = periodAmount.value;   
+      appData.periodAmount = periodAmount.value;
     },      
-    calcSaveMoney: function(){
-      return appData.budgetMonth * appData.period;
+    calcIncomePeriod: function(){
+      incomePeriod.value = budgetMonth.value * periodAmount.value
     },     
   } 
 
@@ -250,7 +250,14 @@ let appData = {
   btnStart.addEventListener('click', appData.start);
   btnExpenses.addEventListener('click', appData.addExpensesBlock);
   btnIncome.addEventListener('click', appData.addIncomeBlock);  
-  periodAmount.addEventListener('input', appData.eventFunc);
+  periodAmount.addEventListener('change', () => {
+    appData.changePeriodAmound();
+    appData.calcIncomePeriod();
+    
+  });
+  // periodAmount.addEventListener('input', appData.calcIncomePeriod);
+
+
 
 
   
@@ -269,7 +276,7 @@ let appData = {
 
   
   // appData.getInfoDeposit();
-  // console.log(appData.percentDeposit, appData.moneyDeposit,appData.calcSaveMoney());
+  // console.log(appData.percentDeposit, appData.moneyDeposit,appData.calcIncomePeriod());
  
   // for (let key in appData){
   //   console.log('Hаша программа включает в себя данные: ' + key + ' значение: ' + appData[key]);
