@@ -226,9 +226,7 @@ let appData = {
         do{
           this.moneyDeposit = prompt('Какая сумма заложена?', 10000);
          } 
-         while(!isNumber(this.moneyDeposit));
-  
-        
+         while(!isNumber(this.moneyDeposit));        
                 
       }
     },
