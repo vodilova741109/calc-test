@@ -244,6 +244,7 @@ class AppData {
     } else {
       depositBank.style.display = 'none';
       depositAmount.style.display = 'none';
+      depositPercent.style.display = 'none';
       depositBank.value = '';
       depositAmount.value = '';
       this.deposit = false;
